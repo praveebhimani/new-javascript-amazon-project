@@ -77,9 +77,14 @@ body{
 .cart-display-container{
   display: flex;
   color:white;
+  margin:4px;
 }
 .cart-image-container{
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .cart-image{
   width:45px;
@@ -88,9 +93,12 @@ body{
   position: absolute;
   color:rgb(240, 136, 4);
   font-weight: bold;
-  top:-2px;
-  left:22px;
+  margin-top: -12px;
+  margin-left:6px ;
+  /* top:-2px; */
+  /* left:18px; */
   font-size: 14px;
+  /* justify-content: center; */
 }
 .cart-text{
   margin-top:12px;
@@ -132,9 +140,10 @@ body{
   cursor: pointer;
   margin-top:40px;
   margin-bottom: 5px;
+  transition: background-color 0.15s;
 }
 .add-to-cart-button:hover{
-
+  background-color: orange;
 }
 .product-name{
   font-size:14px;
@@ -171,4 +180,13 @@ body{
   border-radius: 5px; 
   border:1px solid rgb(213, 217, 217);
   box-shadow: 0px 2px 5px rgba(213, 217, 217,0.15);
+}
+.amazon-logo{
+  margin:4px;
+  transition: border 0.15s;
+}
+.amazon-logo:hover{
+  border: 1px solid white;
+  padding:3px;
+  margin:0px;
 }
