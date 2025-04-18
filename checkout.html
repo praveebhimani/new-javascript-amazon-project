@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./styles/pages/checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="left-section">
+        <img class="amazon-logo" src="./images/amazon-logo.png">
+      </div>
+      <div class="middle-section">
+        Checkout (<span>3 items</span>)
+      </div>
+      <div class="right-section">
+        <img src="./images/icons/checkout-lock-icon.png">
+      </div>
+    </header>
+    <section>
+      <div>
+        <div class="review-text">Review your order</div>
+        <div class="main-container">
+          <div class="cart-items js-cart-items">
+          </div>
+          <div class="order-summary-container">
+            <div class="order-summary">
+              <div>
+                <b>Order Summary</b>
+              </div>
+              <div class="order-summary-row"> 
+                <div class="order-summary-text">
+                  Items(3): 
+                </div>
+                <div class="order-summary-cost">
+                  $47.65
+                </div>
+              </div>
+              <div class="order-summary-row"> 
+                <div class="order-summary-text">
+                  Shipping & handling:
+                </div>
+                <div class="order-summary-cost">
+                  $0.00
+                </div>
+              </div>
+              <div class="order-summary-row"> 
+                <div class="order-summary-text">
+                  Total before tax: 
+                </div>
+                <div class="order-summary-cost">
+                  $47.65
+                </div>
+              </div>
+              <div class="order-summary-row"> 
+                <div class="order-summary-text">
+                  Estimated tax (10%):
+                </div>
+                <div class="order-summary-cost">
+                  $4.77
+                </div>
+              </div>
+              <div class="order-summary-row total-row"> 
+                <div class="order-summary-text">
+                  Order total: 
+                </div>
+                <div class="order-summary-cost">
+                  $52.42
+                </div> 
+              </div>
+              <div>
+                <button class="order-button">
+                  Place your order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script type="module" src="./scripts/checkout.js"></script>
+  </body>
+</html>
