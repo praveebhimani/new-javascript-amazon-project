@@ -3,6 +3,8 @@ import { products, findMatchingProduct } from '../data/products.js';
 import { deliveryOptions, findDeliveryOption } from './delivery.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
 
+import { convertCents } from '../data/money.js';
+
 function renderContent(){  
   let htmlContent='';
   cart.forEach((cartItem)=>{
@@ -103,11 +105,6 @@ function renderContent(){
   let beforeTaxCents = itemsCostCents + shippingCostCents;
   let taxCents= Math.round(beforeTaxCents)*0.1;
   let totalCents= Math.round(beforeTaxCents+taxCents);
-  console.log(itemsCostCents);
-  console.log(shippingCostCents);
-  console.log(beforeTaxCents);
-  console.log(taxCents);
-  console.log(totalCents);
   document.querySelector('.js-order-summary').innerHTML=
   `<div>
       <b>Order Summary</b>
@@ -117,7 +114,7 @@ function renderContent(){
         Items(3): 
       </div>
       <div class="order-summary-cost">
-        $47.65
+        $${convertCents(itemsCostCents)}
       </div>
     </div>
     <div class="order-summary-row"> 
@@ -125,7 +122,7 @@ function renderContent(){
         Shipping & handling:
       </div>
       <div class="order-summary-cost">
-        $0.00
+        $${convertCents(shippingCostCents)}
       </div>
     </div>
     <div class="order-summary-row"> 
@@ -133,7 +130,7 @@ function renderContent(){
         Total before tax: 
       </div>
       <div class="order-summary-cost">
-        $47.65
+        $${convertCents(beforeTaxCents)}
       </div>
     </div>
     <div class="order-summary-row"> 
@@ -141,7 +138,7 @@ function renderContent(){
         Estimated tax (10%):
       </div>
       <div class="order-summary-cost">
-        $4.77
+        $${convertCents(taxCents)}
       </div>
     </div>
     <div class="order-summary-row total-row"> 
@@ -149,7 +146,7 @@ function renderContent(){
         Order total: 
       </div>
       <div class="order-summary-cost">
-        $52.42
+        $${convertCents(totalCents)}
       </div> 
     </div>
     <div>
