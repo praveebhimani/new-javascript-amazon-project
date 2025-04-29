@@ -1,5 +1,5 @@
 import {products} from '../data/products.js'
-import {cart, addToCart} from '../data/cart.js'
+import {cart, addToCart, findQuantity} from '../data/cart.js'
 renderContent();
 function renderContent(){
   let productsHTML = '';
@@ -42,10 +42,6 @@ function renderContent(){
   });
 
   function updateCartQuantity(){
-    let quantity=0;
-    cart.forEach(cartItem=>{
-      quantity+=cartItem.quantity;
-    })
-    document.querySelector('.js-cart-quantity').innerHTML=quantity;
+    document.querySelector('.js-cart-quantity').innerHTML=findQuantity();
   }
 }

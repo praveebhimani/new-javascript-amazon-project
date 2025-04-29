@@ -1,4 +1,4 @@
-import {cart, removeFromCart, updateDeliveryOption} from '../data/cart.js'
+import {cart, removeFromCart, updateDeliveryOption, findQuantity} from '../data/cart.js'
 import { products, findMatchingProduct } from '../data/products.js';
 import { deliveryOptions, findDeliveryOption } from './delivery.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
@@ -154,5 +154,7 @@ function renderContent(){
         Place your order
       </button>
     </div>`
+
+    document.querySelector('.js-quantity').innerHTML = `${findQuantity()} items`;
 }
 renderContent();
