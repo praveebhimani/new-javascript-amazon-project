@@ -2,8 +2,8 @@ import {cart, removeFromCart, updateDeliveryOption, findQuantity} from '../data/
 import { findMatchingProduct } from '../data/products.js';
 import { deliveryOptions, findDeliveryOption } from './delivery.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
-import '../data/cart-oop.js';
-import '../data/cart-class.js';
+// import '../data/cart-oop.js';
+// import '../data/cart-class.js';
 import { convertCents } from '../data/money.js';
 
 function renderContent(){  
@@ -35,7 +35,7 @@ function renderContent(){
           </div>
           <div class="cart-item-details">
             <div class="cart-item-name">${matchingProduct.name}</div>
-            <div class="price">$${(matchingProduct.priceCents/100).toFixed(2)}</div>
+            <div class="price">${matchingProduct.getPrice()}</div>
             <div class="quant-upd-del-container">
               <div>Quantity:${cartItem.quantity}</div>
               <div class="update-text">Update</div>
