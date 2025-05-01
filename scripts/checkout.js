@@ -1,8 +1,8 @@
 import {cart, removeFromCart, updateDeliveryOption, findQuantity} from '../data/cart.js'
-import { products, findMatchingProduct } from '../data/products.js';
+import { findMatchingProduct } from '../data/products.js';
 import { deliveryOptions, findDeliveryOption } from './delivery.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
-
+import '../data/cart-oop.js';
 import { convertCents } from '../data/money.js';
 
 function renderContent(){  
